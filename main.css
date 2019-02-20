@@ -7,7 +7,7 @@ nav ul li {
 }
 
 /* #4 */
-.disabled {
+.disabled, .disabled:visited {
    color: grey;
 }
 
@@ -20,22 +20,27 @@ a .disabled {
    color: yellow;
 }
 
-h4 + div div { /* #8 */
+.parent > div > div { /* #8 */
    color: red;
 }
 
-h4 + div h4 + div { /* #9 */
+
+.parent > div > h4 + div { /* #9 */
    color: blue;
 }
 
 
-.parent > h4 { /* #10 */
+.parent div h4  { /* #10  */
    background-color: red;
 }
 
-.parent + h4 { /* #11  & #12 */
+.parent h4 ~ h4 {
    background-color: blue;
-   border: 1px;
+}
+
+
+.grandparent > h4 { /* #11  & #12 */
+   border: 1px solid black;
    border-radius: 20%;
 }
 
